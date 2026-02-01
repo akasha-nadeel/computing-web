@@ -1,0 +1,85 @@
+/* Hero Section Enhancements - Worky Style */
+
+/* Update hero to be centered with background image */
+.hero {
+    justify-content: center;
+    padding: 120px 0 80px !important;
+}
+
+/* Background Image Overlay */
+.hero::before {
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80') !important;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15 !important;
+    z-index: 0;
+}
+
+/* Dark Overlay */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(15, 52, 96, 0.85) 100%);
+    z-index: 1;
+}
+
+/* Center hero content */
+.hero-content {
+    z-index: 2 !important;
+    max-width: 900px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* Update hero badge */
+.hero-badge {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Update hero title */
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+/* Update hero subtitle */
+.hero-subtitle {
+    margin-bottom: var(--space-10) !important;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center hero search */
+.hero-search {
+    margin: 0 auto var(--space-12) !important;
+}
+
+/* Center hero stats */
+.hero-stats {
+    justify-content: center !important;
+    max-width: 800px;
+    margin: 0 auto !important;
+}
+
+.hero-stat {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+    }
+}

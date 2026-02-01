@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering | Resource Library</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <style>
+        /* Page Specific Styles */
+        .page-header {
+            background-image: url('../images/se-banner.png');
+            background-size: cover;
+            background-position: 20% 42%;
+            padding: 240px 0 140px;
+            position: relative;
+            text-align: left;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--bg-card);
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 0;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+        }
+
+        .form-select,
+        .form-input {
+            background: var(--bg-darker);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-white);
+            padding: 10px 15px;
+            font-family: var(--font-body);
+            min-width: 150px;
+        }
+
+        .form-select:focus,
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        .search-group {
+            flex-grow: 1;
+        }
+
+        .search-group input {
+            width: 100%;
+        }
+
+
+        /* Tabs */
+        .type-tabs {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .type-tab {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .type-tab:hover {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+            background: transparent;
+        }
+
+        .type-tab.active {
+            background: var(--accent-orange);
+            color: var(--text-white);
+            border-color: var(--accent-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color: var(--accent-orange);">
+                        <path d="M12 3L20 9L12 15L4 9L12 3Z" fill="currentColor" />
+                        <path d="M4 14L12 20L20 14" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg> FOC
+                </a>
+                <ul class="nav-menu" id="navMenu">
+
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#departments" class="nav-link">Departments</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="upload.html" class="nav-link nav-cta">Upload</a></li>
+
+                </ul>
+                <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <a href="../index.html#departments" class="back-button" aria-label="Go Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+    <section class="page-header">
+        <div class="container page-header-content">
+            <h1>Software <span style="color: var(--accent-orange);">Engineering</span></h1>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 0;">
+                Programming, algorithms, software architecture,<br> web & mobile development resources.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+
+            <!-- Stats Bar -->
+            <div
+                style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 20px; margin-bottom: 30px; margin-top: 13px; position: relative; z-index: 10; box-shadow: var(--shadow-lg);">
+                <div class="stats-bar-grid">
+                    <div>
+                        <div id="totalResources" class="stat-number"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--text-white); margin-bottom: 5px;">0
+                        </div>
+                        <div class="stat-label"
+                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Total
+                            Resources</div>
+                    </div>
+                    <div>
+                        <div id="notesCount" class="stat-number"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
+                            0</div>
+                        <div class="stat-label"
+                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Lecture
+                            Notes</div>
+                    </div>
+                    <div>
+                        <div id="slidesCount" class="stat-number"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
+                            0</div>
+                        <div class="stat-label"
+                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">
+                            Presentations</div>
+                    </div>
+                    <div>
+                        <div id="papersCount" class="stat-number"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
+                            0</div>
+                        <div class="stat-label"
+                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Past Papers
+                        </div>
+                    </div>
+                    <div>
+                        <div id="labsCount" class="stat-number"
+                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
+                            0</div>
+                        <div class="stat-label"
+                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Lab Sheets
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filter-bar">
+                <div class="form-group">
+                    <label class="form-label">Year</label>
+                    <select id="yearFilter" class="form-select">
+                        <option value="all">All Years</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Semester</label>
+                    <select id="semesterFilter" class="form-select">
+                        <option value="all">All Semesters</option>
+                        <option value="1.1">Year 1 - Sem 1</option>
+                        <option value="1.2">Year 1 - Sem 2</option>
+                        <option value="2.1">Year 2 - Sem 1</option>
+                        <option value="2.2">Year 2 - Sem 2</option>
+                        <option value="3.1">Year 3 - Sem 1</option>
+                        <option value="3.2">Year 3 - Sem 2</option>
+                        <option value="4.1">Year 4 - Sem 1</option>
+                        <option value="4.2">Year 4 - Sem 2</option>
+                    </select>
+                </div>
+
+                <div class="form-group search-group">
+                    <label class="form-label">Search</label>
+                    <input type="text" id="searchInput" class="form-input"
+                        placeholder="Search by course code or title...">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Sort By</label>
+                    <select id="sortSelect" class="form-select">
+                        <option value="date-desc">Newest First</option>
+                        <option value="downloads-desc">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Type Tabs -->
+            <div class="type-tabs">
+                <button class="type-tab active" data-type="all">All</button>
+                <button class="type-tab" data-type="notes">Notes</button>
+                <button class="type-tab" data-type="slides">Slides</button>
+                <button class="type-tab" data-type="papers">Papers</button>
+                <button class="type-tab" data-type="labs">Labs</button>
+            </div>
+
+            <!-- Resource Grid -->
+            <div class="resource-grid" id="resourcesGrid">
+                <!-- Resources will be loaded here via JS -->
+            </div>
+
+            <!-- Loading/Empty States -->
+            <div id="loadingState" style="text-align: center; padding: 40px; display: none;">
+                <p style="color: var(--text-white);">Loading resources...</p>
+            </div>
+
+            <div id="emptyState" style="text-align: center; padding: 60px; display: none;">
+                <h3 style="color: var(--text-gray);">No resources found</h3>
+                <button class="btn-worky" onclick="clearAllFilters()"
+                    style="padding: 10px 20px; font-size: 0.8rem; margin-top: 10px;">Clear Filters</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; 2024 Faculty of Computing, SUSL. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Confirmation Modal -->
+    <div id="downloadModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirm Download</h3>
+                <button class="modal-close" onclick="closeDownloadModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to download <strong id="downloadFileName">this file</strong>?</p>
+                <div class="file-summary" id="downloadFileDetails">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeDownloadModal()">Cancel</button>
+                <button class="btn-primary" id="confirmDownloadBtn">Download Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.currentDepartment = 'se';
+    </script>
+    <script src="../js/data.js"></script>
+    <script src="../js/department.js"></script>
+</body>
+
+</html>

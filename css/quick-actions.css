@@ -1,0 +1,29 @@
+﻿/* Quick Action Icons */
+.quick-action-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-6);
+    border-radius: var(--radius-xl);
+    color: var(--white);
+    transition: all var(--transition-base);
+}
+
+.quick-action-icon.notes {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.quick-action-icon.papers {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.quick-action-icon.upload {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.card:hover .quick-action-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+

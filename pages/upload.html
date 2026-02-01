@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resource | SUSL Computing</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/upload.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="color: var(--accent-orange);">
+                        <path d="M12 3L20 9L12 15L4 9L12 3Z" fill="currentColor" />
+                        <path d="M4 14L12 20L20 14" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg> FOC
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#departments" class="nav-link">Departments</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="upload.html" class="nav-link nav-cta active">Upload</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <a href="../index.html#departments" class="back-button" aria-label="Go Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+
+    <!-- Page Header -->
+    <!-- Upload Section -->
+    <section class="section upload-section" style="padding-top: 80px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="upload-container"
+                style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; max-width: 1100px; margin: 0 auto; text-align: left;">
+
+                <!-- Left Column: Google Form -->
+                <div
+                    style="background: var(--bg-card); padding: 10px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); height: fit-content;">
+                    <div style="margin-bottom: 10px; text-align: center;">
+                        <h2 style="color: var(--text-white); margin-bottom: 5px; font-size: 1.5rem;">Submit Resource
+                        </h2>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            Fill the form below to contribute.
+                        </p>
+                    </div>
+
+                    <div class="google-form-wrapper" style="position: relative; overflow: hidden; padding-top: 60vh;">
+                        <div class="iframe-loader" id="formLoader">
+                            <div class="spinner"></div>
+                        </div>
+                        <iframe onload="document.getElementById('formLoader').classList.add('hidden')"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSdjtDWour7f6jrCtT9Rv4Nct-xcQyUi9O6kEwXfAvy6jRUodw/viewform?embedded=true"
+                            width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+                            style="position: absolute; top: 0; left: 0; border: none; background: #fff; border-radius: 8px;">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right Column: Awareness & Instructions -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+
+                    <!-- Important Note Card -->
+                    <div
+                        style="background: rgba(252, 194, 0, 0.1); padding: 25px; border-radius: 12px; border: 1px solid rgba(252, 194, 0, 0.2);">
+                        <div style="color: var(--accent-orange); font-size: 1.5rem; margin-bottom: 15px;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3 style="color: var(--text-white); font-size: 1.1rem; margin-bottom: 10px;">Before You Submit
+                        </h3>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.6;">
+                            Please ensure the <strong style="color: var(--text-white);">Course Code</strong> and <strong
+                                style="color: var(--text-white);">Academic Year</strong> are correct.
+                        </p>
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">
+                            Accurate details help other students find these resources easily.
+                        </p>
+                    </div>
+
+                    <!-- Moderation Info Card -->
+                    <div
+                        style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <h3 style="color: var(--text-white); font-size: 1.1rem; margin-bottom: 10px;">Moderation Process
+                        </h3>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; line-height: 1.6;">
+                            All submissions are moderated by our admins. Your resource will appear on the website within
+                            24-48 hours after approval.
+                        </p>
+                        <div
+                            style="display: flex; align-items: center; gap: 10px; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span style="color: var(--text-white); font-weight: 500;">24 - 48 Hours Approval Time</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>Upload Successful!</h2>
+            <p>Your resource has been submitted and is pending approval.</p>
+            <button class="btn-worky" id="closeModal">Upload Another</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; 2024 Faculty of Computing, SUSL. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/upload.js"></script>
+</body>
+
+</html>
