@@ -185,49 +185,27 @@
         <div class="container">
 
             <!-- Stats Bar -->
-            <div
-                style="background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 20px; margin-bottom: 30px; margin-top: 9px; position: relative; z-index: 10; box-shadow: var(--shadow-lg);">
-                <div class="stats-bar-grid">
-                    <div>
-                        <div id="totalResources" class="stat-number"
-                            style="font-size: 1.8rem; font-weight: 700; color: var(--text-white); margin-bottom: 5px;">0
-                        </div>
-                        <div class="stat-label"
-                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Total
-                            Resources</div>
-                    </div>
-                    <div>
-                        <div id="notesCount" class="stat-number"
-                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
-                            0</div>
-                        <div class="stat-label"
-                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Lecture
-                            Notes</div>
-                    </div>
-                    <div>
-                        <div id="slidesCount" class="stat-number"
-                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
-                            0</div>
-                        <div class="stat-label"
-                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">
-                            Presentations</div>
-                    </div>
-                    <div>
-                        <div id="papersCount" class="stat-number"
-                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
-                            0</div>
-                        <div class="stat-label"
-                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Past Papers
-                        </div>
-                    </div>
-                    <div>
-                        <div id="labsCount" class="stat-number"
-                            style="font-size: 1.8rem; font-weight: 700; color: var(--accent-orange); margin-bottom: 5px;">
-                            0</div>
-                        <div class="stat-label"
-                            style="font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase;">Lab Sheets
-                        </div>
-                    </div>
+            <!-- Stats Bar -->
+            <div class="stats-container">
+                <div class="stat-card-total">
+                    <div id="totalResources" class="stat-number-lg">0</div>
+                    <div class="stat-label">Total Resources</div>
+                </div>
+                <div class="stat-card">
+                    <div id="notesCount" class="stat-number-sm">0</div>
+                    <div class="stat-label">Lecture Notes</div>
+                </div>
+                <div class="stat-card">
+                    <div id="slidesCount" class="stat-number-sm">0</div>
+                    <div class="stat-label">Presentations</div>
+                </div>
+                <div class="stat-card">
+                    <div id="papersCount" class="stat-number-sm">0</div>
+                    <div class="stat-label">Past Papers</div>
+                </div>
+                <div class="stat-card">
+                    <div id="labsCount" class="stat-number-sm">0</div>
+                    <div class="stat-label">Lab Sheets</div>
                 </div>
             </div>
 
@@ -267,14 +245,7 @@
                 </div>
             </div>
 
-            <!-- Type Tabs -->
-            <div class="type-tabs">
-                <button class="type-tab active" data-type="all">All</button>
-                <button class="type-tab" data-type="notes">Notes</button>
-                <button class="type-tab" data-type="slides">Slides</button>
-                <button class="type-tab" data-type="papers">Papers</button>
-                <button class="type-tab" data-type="labs">Labs</button>
-            </div>
+
 
             <!-- Resource Grid -->
             <div class="resource-grid" id="resourcesGrid">

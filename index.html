@@ -64,49 +64,26 @@
     <!-- Detailed Stats Bar -->
     <div style="background: var(--bg-dark); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 0;">
         <div class="container">
-            <div
-                style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 30px; text-align: center;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
-                    <div>
-                        <div id="statTotal"
-                            style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 5px; font-family: 'Oswald', sans-serif;">
-                            0</div>
-                        <div
-                            style="color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">
-                            Total Resources</div>
-                    </div>
-                    <div>
-                        <div id="statNotes"
-                            style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 5px; font-family: 'Oswald', sans-serif;">
-                            0</div>
-                        <div
-                            style="color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">
-                            Lecture Notes</div>
-                    </div>
-                    <div>
-                        <div id="statSlides"
-                            style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 5px; font-family: 'Oswald', sans-serif;">
-                            0</div>
-                        <div
-                            style="color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">
-                            Presentations</div>
-                    </div>
-                    <div>
-                        <div id="statPapers"
-                            style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 5px; font-family: 'Oswald', sans-serif;">
-                            0</div>
-                        <div
-                            style="color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">
-                            Past Papers</div>
-                    </div>
-                    <div>
-                        <div id="statLabs"
-                            style="font-size: 2.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 5px; font-family: 'Oswald', sans-serif;">
-                            0</div>
-                        <div
-                            style="color: var(--text-gray); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;">
-                            Lab Sheets</div>
-                    </div>
+            <div class="stats-container">
+                <div class="stat-card-total">
+                    <div id="statTotal" class="stat-number-lg">0</div>
+                    <div class="stat-label">Total Resources</div>
+                </div>
+                <div class="stat-card">
+                    <div id="statNotes" class="stat-number-sm">0</div>
+                    <div class="stat-label">Lecture Notes</div>
+                </div>
+                <div class="stat-card">
+                    <div id="statSlides" class="stat-number-sm">0</div>
+                    <div class="stat-label">Presentations</div>
+                </div>
+                <div class="stat-card">
+                    <div id="statPapers" class="stat-number-sm">0</div>
+                    <div class="stat-label">Past Papers</div>
+                </div>
+                <div class="stat-card">
+                    <div id="statLabs" class="stat-number-sm">0</div>
+                    <div class="stat-label">Lab Sheets</div>
                 </div>
             </div>
         </div>
